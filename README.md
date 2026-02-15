@@ -1,6 +1,8 @@
 Anki MCP Server
 ===============
 
+> **Note:** This is an npm-published fork of [scorzeth/anki-mcp-server](https://github.com/scorzeth/anki-mcp-server), packaged for easier installation and use.
+
 An MCP server implementation that connects to a locally running Anki, providing card review and creation.
 
 This server is designed to work with the [Anki desktop app](https://apps.ankiweb.net/) and the [Anki-Connect](https://foosoft.net/projects/anki-connect/) add-on.
