@@ -1,4 +1,5 @@
-# Anki MCP Server
+Anki MCP Server
+===============
 
 An MCP server implementation that connects to a locally running Anki, providing card review and creation.
 
@@ -6,7 +7,26 @@ This server is designed to work with the [Anki desktop app](https://apps.ankiweb
 
 Make sure you have the add-on installed before using.
 
-## Resources
+Installation
+------------
+
+### From npm
+
+```bash
+npm install -g @mieubrisse/anki-mcp-server
+```
+
+### From source
+
+```bash
+git clone https://github.com/mieubrisse/anki-mcp-server.git
+cd anki-mcp-server
+npm install
+npm run build
+```
+
+Resources
+---------
 - **anki://search/deckcurrent**
   - Returns all cards from current deck
   - Equivalent of `deck:current` in Anki
@@ -17,7 +37,8 @@ Make sure you have the add-on installed before using.
   - Returns all unseen cards 
   - Equivalent of `is:new` in Anki
 
-## Tools
+Tools
+-----
 - **update_cards**
   - Marks cards with given card IDs as answered and gives them an ease score between 1 (Again) and 4 (Easy)
   - Inputs:
@@ -39,7 +60,8 @@ Make sure you have the add-on installed before using.
   - Inputs:
     - `num` (number): Number of cards
 
-## Development
+Development
+-----------
 
 Install dependencies:
 ```bash
@@ -56,12 +78,28 @@ For development with auto-rebuild:
 npm run watch
 ```
 
-## Configuration 
+Configuration
+-------------
 
-To use with Claude Desktop, add the server config:
+### Using with Claude Desktop
+
+After installing via npm, add the server config:
 
 On MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "anki-mcp-server": {
+      "command": "npx",
+      "args": ["-y", "@mieubrisse/anki-mcp-server"]
+    }
+  }
+}
+```
+
+Or if you built from source:
 
 ```json
 {

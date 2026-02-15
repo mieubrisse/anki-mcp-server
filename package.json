@@ -1,15 +1,33 @@
 {
-  "name": "@scorzeth/anki-mcp-server",
+  "name": "@mieubrisse/anki-mcp-server",
   "version": "1.0.0",
   "description": "An MCP server for interacting with your Anki",
   "license": "MIT",
   "author": "Scott Orzech & Wai Son Wong",
+  "homepage": "https://github.com/mieubrisse/anki-mcp-server#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mieubrisse/anki-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mieubrisse/anki-mcp-server/issues"
+  },
+  "keywords": [
+    "anki",
+    "mcp",
+    "model-context-protocol",
+    "spaced-repetition",
+    "flashcards",
+    "anki-connect"
+  ],
   "type": "module",
   "bin": {
     "anki-server": "./build/index.js"
   },
   "files": [
-    "build"
+    "build",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
