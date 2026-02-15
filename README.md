@@ -65,6 +65,29 @@ Tools
 Development
 -----------
 
+### Using Docker and Make (recommended)
+
+No local Node.js installation required. Just install Docker and Make:
+
+```bash
+# Build the project
+make build
+
+# Run publish dry-run (test without publishing)
+make publish-dry-run
+
+# Publish to npm (requires NPM_TOKEN)
+NPM_TOKEN=your-npm-token make publish
+
+# Clean build artifacts
+make clean
+
+# See all available commands
+make help
+```
+
+### Using Node.js directly
+
 Install dependencies:
 ```bash
 npm install
